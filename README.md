@@ -5,8 +5,8 @@
 This repository contains all code used to implement and evaluate an MDM4-centric biologically informed neural network inspired by the P-NET architecture introduced in Elmarakeby et al. (2021). The goal of this project is to determine whether pathways directly involving the gene MDM4 contain sufficient biological signal to predict metastatic progression in prostate cancer. For comparison, we also include a fully connected baseline model with a matched number of parameters.
 The dataset used in this project is the P1000 prostate cancer cohort, which includes gene-level copy-number variation (CNV) profiles for approximately 13,800 genes and clinical labels indicating whether each sample is from a primary or metastatic tumour. The dataset is not included in this repository because the files exceed GitHub size limits; you must download them manually from the original database.
 
-**Repository Structure
-**
+**Repository Structure**
+
 The file data_loader.py handles all data ingestion and preprocessing. It loads the CNV matrix, clinical responses, and training/validation/test splits. CNV values are transformed into binary amplification features to match the modelling choices described in the original paper. This file ensures that gene ordering is consistent across all components of the pipeline.
 
 The file pathways.py loads KEGG and Reactome pathway collections from provided GMT files. It identifies all pathways that contain the gene MDM4 and constructs binary mask matrices mapping genes to pathways. These masks define the sparse, biologically informed connectivity used in the MDM4-anchored model.
@@ -21,8 +21,8 @@ The script run_model_baseline.py trains the fully connected baseline model using
 
 The GMT pathway files (kegg.gmt and reactome.gmt) are included in the repository and are used to determine MDM4 pathway membership.
 
-**Required External Data Files
-**
+**Required External Data Files**
+
 The following files must be downloaded from the database. They come from the original P-NET dataset and cannot be uploaded here due to size limitations:
 
 P1000_data_CNA_paper.csv        # CNV matrix (~13,802 genes × patients)
@@ -34,8 +34,8 @@ RESPONSE_FILE = BASE_DIR / "response_paper.csv"
 
 Once these files are present, models can be trained and evaluated.
 
-**How to Run the Models
-**
+**How to Run the Models**
+
 To train and test the MDM4-anchored biologically informed model:
 python run_pnet_mdm4.py
 
@@ -44,6 +44,6 @@ python run_model_baseline.py
 
 Both scripts should automatically report validation and test AUC, accuracy, loss curves, and runtime.
 
-**Summary
-**
+**Summary**
+
 This project demonstrates that a biologically constrained architecture can achieve strong predictive performance while being more interpretable than an equally sized fully connected model. The results support the significance of MDM4-related pathways in metastatic prostate cancer biology. The repository provides a clean and modular implementation that can be extended to other genes, pathways, or disease contexts.
