@@ -3,7 +3,7 @@
 **CS 679 Final Project — Morghan van Walsum & Saranya Varakunan**
 
 This repository contains all code used to implement and evaluate an MDM4-centric biologically informed neural network inspired by the P-NET architecture introduced in Elmarakeby et al. (2021). The goal of this project is to determine whether pathways directly involving the gene MDM4 contain sufficient biological signal to predict metastatic progression in prostate cancer. For comparison, we also include a fully connected baseline model with a matched number of parameters.
-The dataset used in this project is the P1000 prostate cancer cohort, which includes gene-level copy-number variation (CNV) profiles for approximately 13,800 genes and clinical labels indicating whether each sample is from a primary or metastatic tumour. The dataset is not included in this repository because the files exceed GitHub size limits; you must download them manually from the original database.
+The dataset used in this project is the P1000 prostate cancer cohort (Armenia et al, 2019), which includes gene-level copy-number variation (CNV) profiles for approximately 13,800 genes and clinical labels indicating whether each sample is from a primary or metastatic tumour. The dataset is not included in this repository because the files exceed GitHub size limits; you must download them manually from the original database.
 
 **Repository Structure**
 
