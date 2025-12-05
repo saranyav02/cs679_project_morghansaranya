@@ -1,4 +1,4 @@
-**MDM4-Anchored Biologically Informed Neural Network**
+# MDM4-Anchored Biologically Informed Neural Network
 
 **CS 679 Final Project — Morghan van Walsum & Saranya Varakunan**
 
