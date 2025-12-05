@@ -15,7 +15,7 @@ The file model_mdm4.py defines the PyTorch implementation of the MDM4-centric pa
 
 The file model_baseline.py implements a fully connected multilayer perceptron (MLP) with three hidden layers (25, 20, and 12 neurons). Its parameter count is matched to the MDM4 model (approximately 3.46 × 10⁵ parameters) to enable a fair architectural comparison. Unlike the MDM4 model, it contains no biological constraints.
 
-**The notebook run_pnet_mdm4.ipynb** (and the script run_pnet_mdm4.py) is the main training and evaluation script for the biologically informed model. It trains the network using Adam optimization, a batch size of 64, L2 regularization (weight decay), and early stopping based on validation AUC. It reports training and validation performance across epochs, evaluates the best model on the held-out test set, and records total runtime.
+**The notebook run_pnet_mdm4.ipynb** (and the script run_pnet_mdm4.py) is the main training and evaluation script for the biologically informed model. It builds a biologically informed model based on MDM4 pathways extracted from .gmt files and prints the identified pathways, trains the model (data needs to be downloaded separately), and prints training time and test AUC.
 
 The script run_model_baseline.py trains the fully connected baseline model using the same training pipeline (batching, L2 regularization, early stopping, Adam optimizer). 
 
